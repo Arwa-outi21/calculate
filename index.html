@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="calculator-buttons">
+            <button class="active" data-name="calculate">Calculate</button>
+            <button data-name="age">Calculate Age</button>
+            <button data-name="age-days">Calculate Age By Days</button>
+            <button data-name="time">Calculate Time</button>
+        </div>
+
+        <div class="calculators">
+                <p id="description">
+                    This is a regular calculator
+                </p>
+                <div class="card calculator" data-name="calculate">
+                    <input id="display" readonly>
+                    <div id="keys">
+                        <button onclick="appendToDsiplay('+')" class="operator-btn">+</button>
+                        <button onclick="appendToDsiplay('7')">7</button>
+                        <button onclick="appendToDsiplay('8')">8</button>
+                        <button onclick="appendToDsiplay('9')">9</button>
+                        <button onclick="appendToDsiplay('-')" class="operator-btn">-</button>
+                        <button onclick="appendToDsiplay('4')">4</button>
+                        <button onclick="appendToDsiplay('5')">5</button>
+                        <button onclick="appendToDsiplay('6')">6</button>
+                        <button onclick="appendToDsiplay('*')" class="operator-btn">*</button>
+                        <button onclick="appendToDsiplay('1')">1</button>
+                        <button onclick="appendToDsiplay('2')">2</button>
+                        <button onclick="appendToDsiplay('3')">3</button>
+                        <button onclick="appendToDsiplay('/')" class="operator-btn">/</button>
+                        <button onclick="appendToDsiplay('0')">0</button>
+                        <button onclick="appendToDsiplay('.')">.</button>
+                        <button onclick="calculate1()">=</button>
+                        <button onclick="clearDisplay()" class="operator-btn">C</button>
+                    </div>
+                </div>
+
+            <div class="card age hide" data-name="age" id="age">
+                <h1>Age Calculator</h1>
+                <h6>Enter you date of birth</h6>
+                <div class="calc">
+                    <input type="date" name="" id="input-value">
+                    <button id="calculate">Calculate Age</button>
+                </div>
+                <h2 id="output">Your age id.. years old</h2>
+            </div>
+
+            <div class="card age-days hide" data-name="age-days" id="age-days">
+                <h1>Age Calculator in Days</h1>
+                <div class="calc">
+                    <div class="birthday">
+                        <label for="">Enter you date of birth</label>
+                        <input type="date" name="" id="input-value-days">
+                    </div>
+                    <div class="default-date">
+                        <label for="">Age at the Date of</label>
+                        <input type="date" name="" id="default-value">
+                    </div>
+                    <button id="calculate">Calculate Age</button>
+                </div>
+                <h2 id="output2">Your age is.. Days Old</h2>
+            </div>
+
+            <div class="card time hide" data-name="time" id="time">
+                <h1>Enter date Time</h1>
+                <input type="date" name="" id="time-date">
+                <button id="calculate">Calculate Time</button>
+                <p id="output3">
+                    <span id="years">Time in years :</span>
+                    <span id="months">Time in months :</span>
+                    <span id="days">Time in days :</span>
+                </p>
+            </div>
+
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
